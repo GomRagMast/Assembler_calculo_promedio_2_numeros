@@ -116,21 +116,23 @@ calculo:
     mov al, aux
     div bl     
     mov notaa, al
-    mov aux, bl  
-    
+    mov aux, ah  
+
     xor ax,ax
     mov al, mult
     mov bl, al
-    mov al, notaa
+    mov al, divi
     div bl
-    mov notaa, al 
-                  
+    mov divi, al                                        
+
     xor ax,ax
     mov al, divi
     mov bl, al
     mov al, aux
     div bl
-    mov notab, al                                    
+    mov notab, al 
+                  
+
 ret 
 
 leer:
@@ -148,7 +150,7 @@ nota21 db 0
 notaB db 0 
 aux db 0
 mult db 10                 
-divi db 2
+divi db 20
 
 msg1 db "Ingrese la nota 1 (n,n): $"
 msg2 db "Ingrese la nota 2 (n,n): $"
